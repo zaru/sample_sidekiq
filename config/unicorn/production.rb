@@ -4,7 +4,8 @@ working_directory @app_path + "/current"
 worker_processes 2
 preload_app true
 timeout 30
-listen "/tmp/unicorn.sock", :backlog => 64
+#listen "/tmp/unicorn.sock", :backlog => 64
+listen 8081, :tcp_nopush => true
 pid "/var/www/sample-sidekiq/shared/tmp/pids/unicorn.pid"
 
 stderr_path "#{@app_path}/log/unicorn.stderr.log"
