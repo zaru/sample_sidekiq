@@ -54,6 +54,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano3-unicorn'
   gem 'capistrano-rails-console'
+  gem 'capistrano-sidekiq', github: 'seuros/capistrano-sidekiq'
 
 end
 group :production, :staging do

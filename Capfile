@@ -1,5 +1,6 @@
 require 'capistrano/setup'
 require 'capistrano/deploy'
+require 'capistrano/sidekiq'
 
 # rbenvを使用している場合
 require 'capistrano/rbenv'

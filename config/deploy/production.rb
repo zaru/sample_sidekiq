@@ -1,9 +1,11 @@
 set :rails_env, "production"
 set :unicorn_rack_env, "production"
+#set :sidekiq_role, :web
 
 role :app, %w{vagrant@192.168.33.40}
 role :web, %w{vagrant@192.168.33.40}
 role :db,  %w{vagrant@192.168.33.40}
+
 
 server '192.168.33.40', user: 'vagrant', roles: %w{web app}
 
